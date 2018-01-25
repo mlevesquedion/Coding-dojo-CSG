@@ -23,4 +23,4 @@ from solution import no_adjacent_integers
 )
 def test_solution(lower, upper):
     ans = no_adjacent_integers(lower, upper)
-    assert all(a not in (b - 1, b + 1) for a, b in zip(ans, ans[1:]) and sorted(ans) == range(lower, upper))
+    assert all(a not in (b - 1, b + 1) for a, b in zip(ans, ans[1:])) and sorted(ans) == range(lower, upper)
